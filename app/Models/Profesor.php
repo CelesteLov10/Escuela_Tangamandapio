@@ -10,6 +10,6 @@ class Profesor extends Model
     use HasFactory;
 
     public function grado(){
-        return $this-> belongsTo(Grado::class);
+        return $this-> hasMany(Grado::class);
     }
 }
