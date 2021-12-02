@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Profesor extends Model
 {
     use HasFactory;
+
+    public function grado(){
+        return $this->hasMany(Grado::class);
+    }
 }
