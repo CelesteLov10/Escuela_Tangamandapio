@@ -15,6 +15,12 @@ class CreateAlumnosTable extends Migration
     {
         Schema::create('alumnos', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('grado_id');
+            $table->string('nombre');
+            $table->string('apellido');
+            $table->string('identidad');
+            $table->string('nota');
+            $table->string('direccion');
             $table->timestamps();
         });
     }
