@@ -20,7 +20,6 @@ class ProfesorFactory extends Factory
             'identidad'=>$this->faker->numerify('####-')
             .$this->faker->numberBetween(1950,2000)
             .$this->faker->unique()->numerify('-####'),
-            'clase'=>$this->faker->randomElement($array = array ('C. naturales','C. sociales','espaniol','matematicas','dibujo')),
             'telefono'=>$this->faker->e164PhoneNumber
         ];
     }

@@ -9,12 +9,12 @@ class Grado extends Model
 {
     use HasFactory;
     public function alumnos(){
-        return $this-> hasMany(Alumno::class);
+        return $this->hasMany(Alumno::class);
     }
 
    
     public function profesors(){
-        return $this-> hasMany(Profesor::class);
+        return $this->hasMany(Profesor::class);
     }
 
     
