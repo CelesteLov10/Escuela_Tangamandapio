@@ -18,7 +18,7 @@ class CreateProfesorsTable extends Migration
             $table->unsignedBigInteger('grado_id');
             $table->string('nombre');
             $table->string('apellido');
-            $table->string('identidad');
+            $table->string('identidad')->unique();
             $table->string('clase');
             $table->string('telefono');
             $table->timestamps();
