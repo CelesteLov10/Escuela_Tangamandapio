@@ -10,8 +10,8 @@
 </div>
 @endif
 
-<h1>Registro de Alumnos </h1>
-{{$alumnos->links()}}
+<h1>Registro de Alumnos Matriculados</h1>
+{!!$alumnos->links()!!}
 
 <form class="form-inline my-2 my-lg-5 mx-5">
       <label>Ingrese el nombre un alumno </label>

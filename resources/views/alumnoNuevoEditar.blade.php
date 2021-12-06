@@ -1,6 +1,6 @@
 @extends('plantillas.plantilla')
 
-@section('titulo','Alumno nuevo')
+@section('titulo','Alumno Editar')
 
 @section('contenido')
 

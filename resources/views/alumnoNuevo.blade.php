@@ -40,7 +40,7 @@
 
   <div class="form-group">
    <label for="fecha_nacimiento">Fecha nacimiento</label>
-    <input type="number" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="######">
+    <input type="text" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="##-##-##">
   </div>
 
   <div class="form-group">
