@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlumnoController;
 use App\Http\Controllers\GradoController;
+use App\Http\Controllers\ProfesorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +58,10 @@ Route::get('/grados',
 [GradoController::class, 'index']
 )->name('grado.index');
 
+Route::get('/grados/re',
+[GradoController::class, 'relacion1']
+)->name('grado.relacion');
+
 Route::get('/grados/{id}',
 [GradoController::class, 'show']
 )->name('grado.mostrar')->where('id', '[0-9]+');
@@ -83,5 +88,38 @@ Route::put('/grados/{id}/editar',
 Route::delete('/grados/{id}/borrar',
  [GradoController::class, 'destroy']
  )->name('grado.borrar')->where('id', '[0-9]+');
+
+
+ //ruta de profesor
+ Route::get('/profesors',
+[ProfesorController::class, 'index']
+)->name('profesor.index');
+
+Route::get('/prfoesors/{id}',
+[ProfesorController::class, 'show']
+)->name('profesor.mostrar')->where('id', '[0-9]+');
+
+//ruta para crear formulario
+Route::get('/profesors/crear',
+[ProfesorController::class, 'create']
+)->name('profesor.crear');
+
+Route::post('/profesors/crear',
+[ProfesorController::class, 'store']
+)->name('profesor.guardar');
+
+//ruta para editar formulario
+Route::get('/profesors/{id}/editar',
+[ProfesorController::class, 'edit']
+)->name('profesor.editar')->where('id','[0-9]+');
+
+Route::put('/profesors/{id}/editar',
+[ProfesorController::class, 'update']
+)->name('profesor.update')->where('id','[0-9]+');
+
+//ruta eliminar
+Route::delete('/profesors/{id}/borrar',
+ [ProfesorController::class, 'destroy']
+ )->name('profesor.borrar')->where('id', '[0-9]+');
 
 

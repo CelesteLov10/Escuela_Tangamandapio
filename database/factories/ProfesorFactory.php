@@ -18,6 +18,7 @@ class ProfesorFactory extends Factory
         return [
             //
             'grado_id'=>$this->faker->numberBetween(1,6),
+            'profesor_id'=>$this->faker->numberBetween(1,6),
             'nombre'=>$this->faker->name,
             'apellido'=>$this->faker->lastname,
             'identidad'=>$this->faker->numerify('####-')

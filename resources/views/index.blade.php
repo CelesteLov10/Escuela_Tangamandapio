@@ -40,7 +40,7 @@
       <td>{{$alumno->identidad}}</td>
       <td><a class="btn btn-info" href="{{route('alumno.mostrar', ['id'=> $alumno->id]) }}" >Ver</a></td>
       <td><a class="btn btn-warning" href="{{route('alumno.editar', ['id'=>$alumno->id]) }}">Modificar</a></td>
-      <td><form method="post" action="{{route('alumno.borrar', ['id'=>$alumno->id])}}">
+      <td><form method="post" action="{{route('alumno.borrar', ['id'=>$alumno->id]) }}">
           @csrf
           @method('delete')
           <input type="submit" onclick="return confirm('Quieres eliminar a {{$alumno->nombre}}?')" value="Eliminar" class="btn btn-danger"></td>

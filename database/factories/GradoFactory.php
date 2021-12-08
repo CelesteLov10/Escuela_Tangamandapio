@@ -18,6 +18,7 @@ class GradoFactory extends Factory
             //
             'profesor_id'=>$this->faker->numberBetween(1,6),
             'alumno_id'=>$this->faker->numberBetween(1,6),
+            'grado_id'=>$this->faker->numberBetween(1,6),
             'nombre_clase'=>$this->faker->randomElement($array = array ('C. naturales','C. sociales','espaniol','matematicas','dibujo')),
             'jornada'=>$this->faker->randomElement($array = array ('matutina','vespertina'))
         ];

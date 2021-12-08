@@ -10,10 +10,15 @@ class GradoController extends Controller
 {
        //
    public function index(){
-   // $grados=DB::table('grados')  ver los alumnos matriculados en cada grado.
-    -//>join('alumnos', 'alumnos.')
     $grados = Grado::paginate(10);
     return view('grado.indexGrado')->with('grados',$grados);
+}
+
+public function relacion1(){
+    $grados=DB::table('grados')
+    ->join('alumnos', 'alumnos.alumno_id','=','grados.alumno_id')
+    ->select('alumnos.nombre','alumnos.apellido','alumnos.identidad');
+    return view('tablaGradoAlumno')->with('grados',$grados);
 }
 
 public function show($id){

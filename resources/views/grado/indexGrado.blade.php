@@ -13,12 +13,6 @@
 <h1>Registro de Grados</h1>
 {!!$grados->links()!!}
 
-<form class="form-inline my-2 my-lg-5 mx-5">
-      <label>Ingrese el nombre un alumno </label>
-      <input class="form-control mr-sm-2" type="search" 
-      placeholder="buscar" aria-label="Buscar">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-    </form>
 <table class="table mx-3">
   <thead class="thead-dark">
     <tr>
@@ -33,7 +27,8 @@
   @forelse($grados as $grado)
     <tr>
       <th>{{$grado->id}}</th>
-      <td>{{$grado->nombre_clase}}</td>
+      <td>
+      <a href="{{route('grado.relacion')}}">{{$grado->nombre_clase}}</a></td>
       <td><a class="btn btn-info" href="{{route('grado.mostrar', ['id'=> $grado->id]) }}" >Ver</a></td>
       <td><a class="btn btn-warning" href="{{route('grado.editar', ['id'=>$grado->id]) }}">Modificar</a></td>
       <td><form method="post" action="{{route('grado.borrar', ['id'=>$grado->id])}}">

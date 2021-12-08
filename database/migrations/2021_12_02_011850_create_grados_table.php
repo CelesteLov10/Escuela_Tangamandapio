@@ -17,6 +17,7 @@ class CreateGradosTable extends Migration
             $table->id();
             $table->unsignedBigInteger('profesor_id');
             $table->unsignedBigInteger('alumno_id');
+            $table->integer('grado_id');
             $table->string('nombre_clase');
             $table->string('jornada');
             $table->timestamps();
