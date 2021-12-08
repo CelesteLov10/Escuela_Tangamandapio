@@ -30,6 +30,11 @@
     <input type="number" class="form-control" name="alumno_id" id="alumno_id" 
     placeholder="1-6" value="{{$grado->alumno_id}}">
   </div>
+  <div class="form-group">
+   <label for="grado_id">Grado Id</label>
+    <input type="number" class="form-control" name="grado_id" id="grado_id" 
+    placeholder="1-6" value="{{$grado->alumno_id}}">
+  </div>
 
   <div class="form-group">
    <label for="nombre_clase">Nombre de la Clase</label>

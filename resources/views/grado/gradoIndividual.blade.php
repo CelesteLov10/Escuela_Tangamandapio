@@ -21,6 +21,10 @@
       <th>{{$grado->alumno_id}}</th>
     </tr>
     <tr>
+      <th scope="row">Grado Id</th>
+      <th>{{$grado->grado_id}}</th>
+    </tr>
+    <tr>
       <th scope="row">Nombre Clase</th>
       <th>{{$grado->nombre_clase}}</th>
     </tr>

@@ -30,7 +30,7 @@ class ProfesorController extends Controller
             'nombre'=>'required',
             'apellido'=>'required|alpha',
             'identidad'=>'required|unique:profesors,identidad',
-            'clase'=>'required|alpha',
+            'clase'=>'required',
             'telefono'=>'required',
             
         ]);
@@ -71,7 +71,7 @@ class ProfesorController extends Controller
             'nombre'=>'required',
             'apellido'=>'required|alpha',
             'identidad'=>'required|unique:profesors,identidad',
-            'clase'=>'required|alpha',
+            'clase'=>'required',
             'telefono'=>'required',
             
         ]);

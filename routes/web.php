@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlumnoController;
 use App\Http\Controllers\GradoController;
 use App\Http\Controllers\ProfesorController;
+use App\Http\Controllers\RelacionesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -123,3 +124,7 @@ Route::delete('/profesors/{id}/borrar',
  )->name('profesor.borrar')->where('id', '[0-9]+');
 
 
+// relaciones ruta
+Route::get('/relacion',
+[RelacionesController::class, 'index']
+);

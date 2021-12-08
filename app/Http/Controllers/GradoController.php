@@ -35,7 +35,8 @@ public function store(Request $request){
     $request->validate([
         'profesor_id'=>'numeric',
         'alumno_id'=>'numeric',
-        'nombre_clase'=>'required|alpha',
+        'grado_id'=>'numeric',
+        'nombre_clase'=>'required',
         'jornada'=>'required|alpha',
         
     ]);
@@ -43,6 +44,7 @@ public function store(Request $request){
 
     $nuevoGrado->profesor_id = $request->input('profesor_id');
     $nuevoGrado->alumno_id = $request->input('alumno_id');
+    $nuevoGrado->grado_id = $request->input('grado_id');
     $nuevoGrado->nombre_clase = $request->input('nombre_clase');
     $nuevoGrado->jornada = $request->input('jornada');
 
@@ -70,13 +72,15 @@ public function update(Request $request, $id){
     $request->validate([
         'profesor_id'=>'numeric',
         'alumno_id'=>'numeric',
-        'nombre_clase'=>'required|alpha',
+        'grado_id'=>'numeric',
+        'nombre_clase'=>'required',
         'jornada'=>'required|alpha',
         
     ]);
 
     $grado->profesor_id = $request->input('profesor_id');
     $grado->alumno_id = $request->input('alumno_id');
+    $grado->grado_id = $request->input('grado_id');
     $grado->nombre_clase = $request->input('nombre_clase');
     $grado->jornada = $request->input('jornada');
    

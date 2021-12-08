@@ -14,6 +14,6 @@ class Grado extends Model
     }
 
     public function profesors(){
-        return $this->hasMany(Profesor::class);
+        return $this->belongsToMany(Profesor::class);
     }
 }

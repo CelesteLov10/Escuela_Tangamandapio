@@ -35,6 +35,7 @@ class AlumnoController extends Controller
        $nuevoAlumno = new Alumno();
 
        $nuevoAlumno->grado_id = $request->input('grado_id');
+       $nuevoAlumno->alumno_id = $request->input('alumno_id');
        $nuevoAlumno->nombre = $request->input('nombre');
        $nuevoAlumno->apellido = $request->input('apellido');
        $nuevoAlumno->identidad = $request->input('identidad');
@@ -64,13 +65,14 @@ class AlumnoController extends Controller
        $request->validate([
            'grado_id'=>'required|numeric|min:0|max:6',
            'nombre'=>'required',
-           'apellido'=>'required|alpha',
+           'apellido'=>'required',
            'identidad'=>'required',
            'fecha_nacimiento'=>'required',
            'direccion'=>'required'
        ]);
 
        $alumno->grado_id = $request->input('grado_id');
+       $alumno->alumno_id = $request->input('alumno_id');
        $alumno->nombre = $request->input('nombre');
        $alumno->apellido = $request->input('apellido');
        $alumno->identidad = $request->input('identidad');

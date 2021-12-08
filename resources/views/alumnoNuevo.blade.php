@@ -17,10 +17,15 @@
 @endif
 
 <form class="mx-3" action="" method="post">
-  @csrf  <!--DIRECTIVA BLADE AGREGA UN CAMPO OCULTO CON EL TOKEN-->
+  @csrf 
   <div class="form-group">
    <label for="grado_id">Grado</label>
     <input type="number" class="form-control" name="grado_id" id="grado_id" placeholder=" 0 - 6">
+  </div>
+
+  <div class="form-group">
+   <label for="alumno_id">ID Alumno</label>
+    <input type="number" class="form-control" name="alumno_id" id="alumno_id" placeholder=" 0 - 6">
   </div>
 
    <div class="form-group">
